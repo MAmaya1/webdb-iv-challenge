@@ -42,3 +42,5 @@ Organize and name your files anyway you see fit.
 - add _units of measure_ support for the **ingredient**s.
 - design and build a front end client for your API.
 - add a `getShoppingList(recipeId)` that returns a list of all the recipe's ingredients including the quantity of each.
+
+Mario Amaya
