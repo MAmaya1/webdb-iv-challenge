@@ -8,6 +8,7 @@ const server = express();
 // Import Routers
 
 const dishesRouter = require('../dishes/dishes-router');
+const recipesRouter = require('../recipes/recipes-router');
 
 // Middleware
 
@@ -21,5 +22,6 @@ server.get('/', (req, res) => {
 })
 
 server.use('/api/dishes', dishesRouter);
+server.use('/api/recipes', recipesRouter);
 
 module.exports = server;

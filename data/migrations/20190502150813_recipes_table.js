@@ -13,15 +13,8 @@ exports.up = function(knex, Promise) {
             .inTable('dishes')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-
-        tbl 
-            .integer('ingredient_id')
-            .unsigned()
-            .notNullable()
-            .references('id')
-            .inTable('ingredients')
-            .onDelete('RESTRICT')
-            .onUpdate('CASCADE');
+        tbl
+            .string('instructions')
     })
 };
 

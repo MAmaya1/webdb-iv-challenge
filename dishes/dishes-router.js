@@ -12,4 +12,18 @@ router.get('/', (req, res) => {
         })
 })
 
+router.get('/:id', (req, res) => {
+    Dishes.getDishById(req.params.id)
+        .then(tracks => {
+            if (tracks) {
+                res.status(201).json(tracks)
+            } else {
+                res.status(404).json({ errorMessage: 'A dish with the specified ID does not exist.' })
+            }
+        })
+        .catch(err => {
+            res.status(500).json({ error: err, message: 'Could not retrieve dish from database.' })
+        })
+})
+
 module.exports = router;
